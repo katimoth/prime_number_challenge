@@ -1,0 +1,66 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Title elements */
+
+h1.title {
+    font-size: 250%;
+    text-align: center;
+    margin-bottom: 0em;
+}
+
+p.subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0em;
+}
+
+/* Headings */
+
+h1 {
+    border-bottom: thin solid black;
+}
+
+/* Table of contents */
+
+nav#TOC {
+    float: right;
+    max-width: 25%;
+    background: white;
+    padding-right: 1.5em;
+    border-radius: 0.5em;
+    border: thin solid black;
+}
+
+@media print {
+    nav#TOC {
+        display: none;
+    }
+}
+
+/* Tables */
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 0.2em;
+    background: #dddddd;
+    border: thin solid black;
+    border-bottom: solid black;
+}
+
+td {
+    padding: 0.2em;
+    border: thin solid black;
+}
+
+/* Other */
+
+code {
+    padding: 0.25em;
+    background: #eeeeee;
+    border-radius: 0.5em;
+}
