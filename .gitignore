@@ -1,0 +1,4 @@
+env/
+primes/__pycache__/
+primes/views/__pycache__/
+primes.egg-info/
