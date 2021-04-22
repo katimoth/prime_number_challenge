@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+# set -x
+
+# help menu
+usage() {
+echo "Usage: $0 (start|stop|restart)"
+}
+
+if [ $# -ne 1 ]; then
+usage
+exit 1
+fi
+case $1 in
+"start")
+    if lsof -Pi :8000 -sTCP:LISTEN -t >/dev/null ; then
+        echo "Error: a process is already using port 8000"
+        exit 1
+    else
+        echo "starting server ..."
+        export FLASK_DEBUG=False
+        export FLASK_APP=primes
+        flask run --host 0.0.0.0 --port 8000 &> /dev/null &
+    fi
+    ;;
+
+"stop")
+    echo "stopping server ..."
+    pkill -f 'flask run --host 0.0.0.0 --port 8000'
+    ;;
+
+*)
+    usage
+    exit 1
+    ;;
+esac

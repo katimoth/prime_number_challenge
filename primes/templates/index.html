@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Prime Number Challenge</title>
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <h1>Enter a prime number</h1>
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="text"/>
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+    {% if isResponse %}
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
