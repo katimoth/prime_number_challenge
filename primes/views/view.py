@@ -1,8 +1,5 @@
 """Prime number challenge views."""
 
-"""App routes."""
-
-import json
 import flask
 import primes
 
